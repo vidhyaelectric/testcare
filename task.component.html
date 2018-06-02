@@ -1,0 +1,76 @@
+
+<!-- <div class = "container" > -->
+  <!-- <div class = "panel panel-primary"> -->
+    <!-- <div class = "panel panel-heading">
+      
+    </div> -->
+    <!-- <div >
+     <img src="./assets/logo.png"  />
+    </div> -->
+    <div class = "container" >
+      <app-navbarhorizontal></app-navbarhorizontal>
+      <div class = "panel panel-body"> 
+        <div class = "row" style="background-color:#f7f7f7;">
+          <div class = "col-md-2">
+          </div>
+          <div class = "col-md-3">
+            <app-dial [taskpercentage]="taskpercent"
+                      [outerstrokecolor] = "taskcolor"
+                      [title]="tasktitle">
+            </app-dial>
+          </div>
+          <div class = "col-md-3">
+              <app-dial [taskpercentage]="trackpercent"
+                        [outerstrokecolor] = "trackcolor"
+                        [title]="tracktitle">
+              </app-dial>
+          </div>
+          <div class = "col-md-3">
+            <app-gauge></app-gauge>
+          </div>
+        </div>
+        
+        <br/>
+        <br/>
+        <div class = "row">
+          <div class = "col-md-2">
+          </div>
+          <div class = "col-md-8">
+              <div class="inner-addon right-addon">
+                  <i class="glyphicon glyphicon-search"></i>
+                  <input type="text" name="search_text" id="search_text" 
+                  class="form-control" align="middle" placeholder="Search" />
+                </div>
+          </div>
+          <div class = "col-md-2">
+            <button class = "btn btn-success" (click) = "callapi()" > NEW CAREPATHWAY</button>  
+          </div>
+        </div>
+        <div class = "container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th>TASK</th>
+                <th>DETAILS</th>
+                <th>DATE</th>
+                <th>PATIENT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks">
+                <td><img [src]="task.image" *ngIf ="task.highlightflag"></td>
+                <td>{{task.name}}</td>
+                <td>{{task.details}}</td>
+                <td>{{task.date}}</td>
+                <td>{{task.patient}} </td>
+              </tr>
+            </tbody> 
+          </table>
+          
+        </div>
+      </div> 
+    <!-- </div> -->
+   <button  [routerLink]="['/navbar']" class="btn btn-success" style="position: absolute; right: 0;">Next</button> 
+  <!-- </div> -->
+  </div>

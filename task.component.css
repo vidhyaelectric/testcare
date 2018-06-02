@@ -1,0 +1,33 @@
+/* .panel-heading {
+   background-color:MediumSeaGreen;
+} */
+.btn-success{
+    background-color:MediumSeaGreen;  
+}
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+  }
+  
+  /* style glyph */
+  .inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+  
+  /* align glyph */
+  .left-addon .glyphicon  { left:  0px;}
+  .right-addon .glyphicon { right: 0px;}
+  
+  /* add padding  */
+  .left-addon input  { padding-left:  30px; }
+  .right-addon input { padding-right: 30px; }
+  
+  .search_text{
+    width: 10px;
+  }
+  
+  body {
+    margin: 10px;
+  }
